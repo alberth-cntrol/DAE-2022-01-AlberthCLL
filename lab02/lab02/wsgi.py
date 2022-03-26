@@ -1,5 +1,5 @@
 """
-WSGI config for lab01 project.
+WSGI config for lab02 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab01.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'lab02.settings')
 
 application = get_wsgi_application()
