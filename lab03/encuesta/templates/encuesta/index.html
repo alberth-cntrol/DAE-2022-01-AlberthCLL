@@ -1,0 +1,13 @@
+<h1>Encuesta</h1>
+
+{% if latest_question_list %}
+    <ul>
+    {% for pregunta in latest_question_list %}
+        <li>
+            <a href="/encuesta/{{ pregunta.id }}/">{{ pregunta.pregunta_texto }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay registros.</p>
+{% endif %}
