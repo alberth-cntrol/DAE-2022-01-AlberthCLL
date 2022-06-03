@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.color-secundario {
+  color: #ff9c63;
+}
+
+.header {
+  display: flex;
+  height: 60px;
+  background-color: #030c1c;
+  font-family: "Poppins", sans-serif;
+}
+.header__logo {
+  max-width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo img {
+  max-height: calc(100% - 10px);
+}
+.header__buscador {
+  padding-left: 50px;
+  flex: 1;
+  display: flex;
+}
+.header__buscador input {
+  flex: 1;
+  background-color: #030c1c;
+  outline: none;
+  border: none;
+  color: #ddd;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+.header__usuario {
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 250px;
+}
+.header__usuario img {
+  height: calc(100% - 10px);
+  border-radius: 50%;
+}
+
+.pos-container {
+  display: flex;
+  background-color: #030c1c;
+  font-family: "Poppins", sans-serif;
+}
+.pos-container .menu {
+  width: 80px;
+  height: calc(100vh - 60px);
+  display: flex;
+  padding-top: 50px;
+}
+.pos-container .menu__lista {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.pos-container .menu__lista li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+.pos-container .menu__lista li img {
+  width: 2.5rem;
+}
+.pos-container .menu__lista li span {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.pos-container .menu__lista li:hover {
+  color: #ff9c63;
+  border-left: 4px solid #ff9c63;
+}
+.pos-container .menu__lista li.active {
+  color: #ff9c63;
+  border-left: 4px solid #ff9c63;
+}
+.pos-container .tabla {
+  flex: 1;
+  border: 1px solid #5e5e5e;
+  display: flex;
+  flex-direction: column;
+}
+.pos-container .tabla .mesas {
+  color: #ddd;
+  height: 80px;
+  display: flex;
+}
+.pos-container .tabla .mesas__lista {
+  display: flex;
+  width: 80%;
+}
+.pos-container .tabla .mesas__lista li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 100px;
+}
+.pos-container .tabla .mesas__lista li .mesas__numero {
+  font-size: 2rem;
+}
+.pos-container .tabla .mesas__lista li:hover {
+  background-color: #051633;
+}
+.pos-container .tabla .mesas__lista li.activo {
+  background-color: #051633;
+  border-bottom: 4px solid #ff9c63;
+}
+.pos-container .tabla .pedido {
+  padding: 20px;
+  flex: 1;
+  background-color: #051633;
+  display: flex;
+}
+.pos-container .tabla .pedido .carta {
+  flex: 1;
+}
+.pos-container .tabla .pedido .carta h3 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.pos-container .tabla .pedido .carta h3 span {
+  font-size: 2rem;
+}
+.pos-container .tabla .pedido .carta__botones {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pos-container .tabla .pedido .carta__platos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.pos-container .tabla .pedido .carta__plato {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  color: #030c1c;
+  transition: 1s all ease;
+  border-radius: 36px;
+  background: #eee;
+  box-shadow: 0px 0px 10px #aaa;
+  width: calc(33% - 10px);
+  min-width: 200px;
+  text-align: center;
+  margin: 5px;
+  height: 200px;
+  padding: 10px;
+}
+.pos-container .tabla .pedido .carta__plato img {
+  max-height: 50%;
+  max-width: 100%;
+  transition: all 0.5s ease;
+}
+.pos-container .tabla .pedido .carta__plato * {
+  margin-bottom: 5px;
+}
+.pos-container .tabla .pedido .carta__plato:hover {
+  background-color: #ff9c63;
+  color: white;
+}
+.pos-container .tabla .pedido .carta__plato:hover img {
+  margin-bottom: 50px;
+  max-height: 30%;
+}
+.pos-container .tabla .pedido .carta__plato:hover .boton-sumar,
+.pos-container .tabla .pedido .carta__plato:hover .boton-restar {
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+  color: white;
+}
+.pos-container .tabla .pedido .carta__plato:hover .boton-sumar:hover,
+.pos-container .tabla .pedido .carta__plato:hover .boton-restar:hover {
+  background-color: transparent;
+  font-size: 2rem;
+  border: 1px solid white;
+}
+.pos-container .tabla .pedido .boleta {
+  width: 400px;
+}
+.pos-container .tabla .pedido .boleta h3 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.pos-container .tabla .pedido .boleta h3 span {
+  font-size: 2rem;
+}
+.pos-container .tabla .pedido .boleta .comanda {
+  background-color: #eee;
+  background: url("./../img/comanda.png") no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 25px 15px 10px 40px;
+  box-shadow: 0px 4px 10px #666;
+}
+.pos-container .tabla .pedido .boleta .comanda__item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 8px;
+}
+.pos-container .tabla .pedido .boleta .comanda__item:nth-child(odd) {
+  background-color: #ebebeb;
+}
+.pos-container .tabla .pedido .boleta .comanda__nombre {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.pos-container .tabla .pedido .boleta .comanda__nombre span:nth-child(2) {
+  margin-top: -5px;
+  font-size: 0.9rem;
+}
+.pos-container .tabla .pedido .boleta .comanda__cantidad, .pos-container .tabla .pedido .boleta .comanda__precio {
+  flex: 25%;
+  text-align: center;
+}
+
+.boton {
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+}
+.boton-primary {
+  background-color: #ff9c63;
+}
+.boton-success {
+  background-color: #58bf81;
+}
+.boton-outline-primary {
+  border: 1px solid #ff9c63;
+  color: #ff9c63;
+}
+.boton-outline-primary:hover, .boton-outline-primary.activo {
+  background-color: #ff9c63;
+  color: #ddd;
+}
+
+.boton-sumar {
+  margin-left: 10px;
+}
